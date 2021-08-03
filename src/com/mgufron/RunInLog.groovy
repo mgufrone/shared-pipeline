@@ -10,7 +10,7 @@ class RunInLog {
   }
   void run(Map msg, Closure body) {
     try {
-      if(msg["id"]) {
+      if(!msg["id"]) {
         msg["id"] = slack.preserveBlock()
       }
       send(msg["id"], ":gh-loading: ${msg["message"]}")
