@@ -3,7 +3,7 @@ package com.mgufron
 class SlackSectionedMessage {
   final Script script
   Object thread
-  List blocks
+  List blocks = []
   SlackSectionedMessage(script) {
     this.script = script
   }
