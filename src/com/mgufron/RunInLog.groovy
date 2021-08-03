@@ -5,14 +5,19 @@ class RunInLog {
   RunInLog(slack) {
     this.slack = slack
   }
+  void send(String msg, int id) {
+    slack.update(id, slack.message(msg))
+  }
   void run(Map msg, Closure body) {
     try {
-      if (msg["id"]) {
-        slack.update(msg["id"], slack.message(":gh-loading: ${msg["message"]}"))
+      if(msg["id"]) {
+        msg["id"] = slack.preserveBlock()
       }
-      slack.update(msg["id"], slack.message(":white_check_mark: ${msg["message"]}"))
+      send(msg["id"], ":gh-loading: ${msg["message"]}")
+      body.call()
+      send(msg["id"], ":white_check_mark: ${msg["message"]}")
     } catch(e) {
-      slack.update(msg["id"], slack.message(":no_entry: ${msg["message"]}"))
+      send(msg["id"], ":no_entry: ${msg["message"]}")
       throw e
     }
   }
