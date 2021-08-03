@@ -5,7 +5,7 @@ class RunInLog {
   RunInLog(slack) {
     this.slack = slack
   }
-  run(Map msg, Closure body) {
+  void run(Map msg, Closure body) {
     try {
       if (msg["id"]) {
         slack.update(msg["id"], slack.message(":gh-loading: ${msg["message"]}"))
