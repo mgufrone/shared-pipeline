@@ -53,7 +53,7 @@ class SlackSectionedMessage {
     this.blocks.push([:])
     return idx
   }
-  send(String color = "") {
+  void send(String color = "") {
     def attachments = [
       "blocks": this.blocks
     ]
@@ -72,7 +72,7 @@ class SlackSectionedMessage {
       "attachments": attachments
     ])
   }
-  sendMessage(Map msg) {
+  void sendMessage(Map msg) {
     this.blocks.push(msg)
     this.send()
   }
