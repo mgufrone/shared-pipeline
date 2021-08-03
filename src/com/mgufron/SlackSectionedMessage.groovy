@@ -34,10 +34,10 @@ class SlackSectionedMessage {
     def _section = [
       "type": "section"
     ]
-    if (map["text"]) {
+    if (composable["text"]) {
       _section["text"] = composable["text"]
     }
-    if(map["accessory"]) {
+    if(composable["accessory"]) {
       _section["accessory"] = composable["accessory"]
     }
     return _section
@@ -76,7 +76,7 @@ class SlackSectionedMessage {
     this.blocks.push(msg)
     this.send()
   }
-  String update(int idx, Map msg, String color = "") {
+  void update(int idx, Map msg, String color = "") {
     this.blocks[idx] = msg
     this.send(color)
   }
