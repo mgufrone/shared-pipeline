@@ -6,7 +6,7 @@ class RunInLog {
     this.slack = slack
   }
   void send(int id, String msg, Map accessory = null) {
-    slack.update(id, slack.message(msg), accessory)
+    slack.update(id, slack.message(msg, accessory))
   }
   void run(Map msg, Closure body) {
     try {
