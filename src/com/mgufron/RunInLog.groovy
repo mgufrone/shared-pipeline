@@ -17,7 +17,7 @@ class RunInLog {
       body.call()
       send(msg["id"], ":white_check_mark: ${msg["message"]}")
     } catch(e) {
-      send(msg["id"], ":no_entry: ${msg["message"]}", map["failBtn"])
+      send(msg["id"], ":no_entry: ${msg["message"]}", msg["failBtn"])
       throw e
     }
   }
