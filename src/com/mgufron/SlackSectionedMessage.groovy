@@ -20,10 +20,10 @@ class SlackSectionedMessage {
       "value"    : value,
     ]
   }
-  Map message(String message, Map accessory) {
+  Map message(String msgString, Map accessory) {
     def msg =[
       "type": "mrkdwn",
-      "text": message
+      "text": msgString
     ]
     if (accessory) {
       msg["accessory"] = accessory
