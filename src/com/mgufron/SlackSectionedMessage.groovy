@@ -9,7 +9,7 @@ class SlackSectionedMessage {
     this.script = script
     this.defaultChannel = defaultChannel
   }
-  Map button(String label, String value, String style = "default") {
+  Map button(String label, String value, String style = "") {
     def isUrl = value.indexOf("http") == 0
     def btn = [
       "type"     : "button",
@@ -18,10 +18,12 @@ class SlackSectionedMessage {
         "emoji": true,
         "text" : label
       ],
-      "style"    : style,
       "action_id": value,
       "value"    : value,
     ]
+    if (style != "") {
+      btn["style"] = style
+    }
     if (isUrl) {
       btn["url"] = value
     }
