@@ -6,8 +6,8 @@ class SlackSectionedMessage {
   Object thread
   List blocks = []
   SlackSectionedMessage(script, String defaultChannel) {
-    this.script = script
-    this.defaultChannel = defaultChannel
+    script = script
+    defaultChannel = defaultChannel
   }
   Map button(String label, String value, String style = "") {
     def isUrl = value.indexOf("http") == 0
@@ -60,42 +60,52 @@ class SlackSectionedMessage {
     ]
   }
   int preserveBlock() {
-    def idx = this.blocks.size()
-    this.blocks.push([:])
+    def idx = blocks.size()
+    blocks.push([:])
     return idx
   }
-  void send(String color = "") {
+  void send(String color = "", boolean asComment = false) {
+    sendAttachments(this.blocks, color, asComment)
+  }
+  private void sendAttachments(List blocks, String color = "", boolean asComment = false) {
     def attachments = [
-      "blocks": this.blocks
+      "blocks": blocks
     ]
     if (color != "") {
       attachments["color"] = color
     }
-    if(this.thread) {
-      script.slackSend([
-        "channel": thread.threadId,
-        "attachments": [attachments],
-        "timestamp": thread.ts,
-      ])
-      return
-    }
-    this.thread = script.slackSend([
+    def payload = [
       "attachments": [attachments],
       "channel": defaultChannel,
-    ])
+      "color": color
+    ]
+    if(thread) {
+      payload["channel"] = thread.threadId
+      if (!asComment) {
+        payload["timestamp"] = thread.ts
+      }
+    }
+    def res = script.slackSend(payload)
+    if(!thread) {
+      thread = res
+    }
   }
-  void sendMessage(Map msg) {
-    this.blocks.push(msg)
-    this.send()
+  void sendMessage(Map msg, boolean asComment = false) {
+    if (asComment) {
+      this.sendAttachments([msg], "", asComment)
+      return
+    }
+    blocks.push(msg)
+    send("", asComment)
   }
   void update(int idx, Map msg, String color = "") {
-    this.blocks[idx] = msg
-    this.send(color)
+    blocks[idx] = msg
+    send(color)
   }
   void success(String color = "#0064ae") {
-    this.send(color)
+    send(color)
   }
   void fail(String color = '#a22725') {
-    this.send(color)
+    send(color)
   }
 }
