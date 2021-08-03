@@ -17,7 +17,17 @@ class RunInLog {
       new Date(),
       start
     )
-    return "${dur.seconds}s"
+    def durations = []
+    if (dur.minutes > 0) {
+      durations.push("${dur.minutes}m")
+    }
+    if (dur.seconds > 0) {
+      durations.push("${dur.seconds}s")
+    }
+    if (dur.millis > 0) {
+      durations.push("${dur.millis}ms")
+    }
+    return durations.join(" ")
   }
   void run(Map msg, Closure body) {
     def start = new Date()

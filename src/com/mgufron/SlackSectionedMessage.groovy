@@ -102,7 +102,7 @@ class SlackSectionedMessage {
     blocks[idx] = msg
     send(color)
   }
-  void success(String color = "#0064ae") {
+  void success(String color = "#017312") {
     send(color)
   }
   void fail(String color = '#a22725') {
