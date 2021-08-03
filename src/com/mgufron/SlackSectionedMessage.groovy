@@ -2,10 +2,12 @@ package com.mgufron
 
 class SlackSectionedMessage {
   final Script script
+  final String defaultChannel
   Object thread
   List blocks = []
-  SlackSectionedMessage(script) {
+  SlackSectionedMessage(script, String defaultChannel) {
     this.script = script
+    this.defaultChannel = defaultChannel
   }
   Map button(String label, String value, String style = "default") {
     return [
@@ -69,7 +71,8 @@ class SlackSectionedMessage {
       return
     }
     thread = script.slackSend([
-      "attachments": attachments
+      "attachments": attachments,
+      "channel": defaultChannel,
     ])
   }
   void sendMessage(Map msg) {
