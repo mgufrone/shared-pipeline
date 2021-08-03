@@ -20,7 +20,7 @@ class SlackSectionedMessage {
       "value"    : value,
     ]
   }
-  Map message(String msgString, Map accessory) {
+  Map message(String msgString, Map accessory = null) {
     def msg =[
       "type": "mrkdwn",
       "text": msgString
