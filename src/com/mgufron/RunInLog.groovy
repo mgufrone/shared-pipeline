@@ -13,6 +13,9 @@ class RunInLog {
     slack.update(id, slack.message(msg, accessory))
   }
   private String runDuration(Date start) {
+    if(!withBenchmark) {
+      return ""
+    }
     def dur = groovy.time.TimeCategory.minus(
       new Date(),
       start
@@ -40,9 +43,9 @@ class RunInLog {
       }
       send(msg["id"], ":gh-loading: ${msg["message"]}")
       body.call()
-      send(msg["id"], ":white_check_mark: ${msg["message"]} (${runDuration(start)})")
+      send(msg["id"], ":white_check_mark: ${msg["message"]} ${runDuration(start)}")
     } catch(e) {
-      send(msg["id"], ":no_entry: ${msg["message"]} (${runDuration(start)})", msg["failBtn"])
+      send(msg["id"], ":no_entry: ${msg["message"]} ${runDuration(start)}", msg["failBtn"])
       throw e
     }
   }
