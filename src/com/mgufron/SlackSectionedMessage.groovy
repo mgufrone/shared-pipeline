@@ -71,7 +71,7 @@ class SlackSectionedMessage {
       return
     }
     thread = script.slackSend([
-      "attachments": attachments,
+      "attachments": [attachments],
       "channel": defaultChannel,
     ])
   }
