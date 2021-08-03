@@ -92,4 +92,10 @@ class SlackSectionedMessage {
     this.blocks[idx] = msg
     this.send(color)
   }
+  void success(String color = "#0064ae") {
+    this.send(color)
+  }
+  void fail(String color = '#a22725') {
+    this.send(color)
+  }
 }
