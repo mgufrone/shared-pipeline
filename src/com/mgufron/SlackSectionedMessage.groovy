@@ -6,8 +6,8 @@ class SlackSectionedMessage {
   Object thread
   List blocks = []
   SlackSectionedMessage(script, String defaultChannel) {
-    script = script
-    defaultChannel = defaultChannel
+    this.script = script
+    this.defaultChannel = defaultChannel
   }
   Map button(String label, String value, String style = "") {
     def isUrl = value.indexOf("http") == 0
