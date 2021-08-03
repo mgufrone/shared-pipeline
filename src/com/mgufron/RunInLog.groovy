@@ -27,6 +27,9 @@ class RunInLog {
     if (dur.millis > 0) {
       durations.push("${dur.millis}ms")
     }
+    if (durations.size() == 0) {
+      return ""
+    }
     return durations.join(" ")
   }
   void run(Map msg, Closure body) {
