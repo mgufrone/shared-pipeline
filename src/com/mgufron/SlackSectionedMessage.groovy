@@ -64,15 +64,15 @@ class SlackSectionedMessage {
     if (color != "") {
       attachments["color"] = color
     }
-    if(thread) {
+    if(this.thread) {
       script.slackSend([
         "channel": thread.threadId,
         "attachments": [attachments],
-        "ts": thread.ts,
+        "timestamp": thread.ts,
       ])
       return
     }
-    thread = script.slackSend([
+    this.thread = script.slackSend([
       "attachments": [attachments],
       "channel": defaultChannel,
     ])
