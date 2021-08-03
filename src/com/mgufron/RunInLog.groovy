@@ -8,7 +8,7 @@ class RunInLog {
   void send(int id, String msg, Map accessory = null) {
     slack.update(id, slack.message(msg), accessory)
   }
-  void run(Map msg, Closure body, Map failAccessory = null) {
+  void run(Map msg, Closure body) {
     try {
       if(!msg["id"] || msg["id"] == null) {
         msg["id"] = slack.preserveBlock()
@@ -17,7 +17,7 @@ class RunInLog {
       body.call()
       send(msg["id"], ":white_check_mark: ${msg["message"]}")
     } catch(e) {
-      send(msg["id"], ":no_entry: ${msg["message"]}", failAccessory)
+      send(msg["id"], ":no_entry: ${msg["message"]}", map["failBtn"])
       throw e
     }
   }
