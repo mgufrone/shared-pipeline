@@ -33,7 +33,7 @@ class RunInLog {
     if (durations.size() == 0) {
       return ""
     }
-    return durations.join(" ")
+    return "(${durations.join(" ")})"
   }
   void run(Map msg, Closure body) {
     def start = new Date()
@@ -43,7 +43,9 @@ class RunInLog {
       }
       send(msg["id"], ":gh-loading: ${msg["message"]}")
       body.call()
-      send(msg["id"], ":white_check_mark: ${msg["message"]} ${runDuration(start)}")
+      if (!msg["sendSuccess"] || msg["sendSuccess"] == true) {
+        send(msg["id"], ":white_check_mark: ${msg["message"]} ${runDuration(start)}")
+      }
     } catch(e) {
       send(msg["id"], ":no_entry: ${msg["message"]} ${runDuration(start)}", msg["failBtn"])
       throw e
