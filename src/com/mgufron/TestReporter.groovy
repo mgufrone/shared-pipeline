@@ -41,9 +41,8 @@ class TestReporter {
   private List<TestProcessor> testCollections = []
   TestReporter(List<String> reportPath) {
     this.reportPath = reportPath
-    this.process()
   }
-  private void process() {
+  void process() {
     reportPath.each { String path ->
       testCollections.push(new TestProcessor(path))
     }
