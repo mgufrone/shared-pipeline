@@ -1,6 +1,6 @@
-import com.mgufron.TestReporter
+import com.mgufron.ReporterProcessor
 
-TestReporter call(List<String> reportPaths) {
+ReporterProcessor call(List<String> reportPaths) {
   def rp = new TestReporter(reportPaths)
   rp.process()
   return rp
