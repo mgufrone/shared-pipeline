@@ -8,7 +8,6 @@ class ReporterSuite {
   int skipped = 0
   ReporterSuite(String reportPath) {
     this.reportPath = reportPath
-    generateReportSuite()
   }
   private void generateReportSuite() {
     println "processing ${reportPath}"

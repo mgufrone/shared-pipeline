@@ -7,11 +7,12 @@ class ReporterProcessor {
   private List<ReporterSuite> testCollections = []
   ReporterProcessor(List<String> reportPath) {
     this.reportPath = reportPath
-    generateReportSuite()
   }
   void generateReportSuite() {
     reportPath.each { String path ->
-      testCollections.push(new ReporterSuite(path))
+      def rp = new ReporterSuite(path)
+      rp.generateReportSuite()
+      testCollections.push(rp)
     }
   }
   int getTotalTests() {

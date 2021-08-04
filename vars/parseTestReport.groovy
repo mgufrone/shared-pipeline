@@ -1,5 +1,7 @@
 import com.mgufron.ReporterProcessor
 
 ReporterProcessor call(List<String> reportPaths) {
-  return new ReporterProcessor(reportPaths)
+  def rp = new ReporterProcessor(reportPaths)
+  rp.generateReportSuite()
+  return rp
 }
