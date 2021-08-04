@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gateway" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gateway/controllers" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gateway/docs" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gateway/repository" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gateway/requests" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gateway/response" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="10" failures="0" time="0.190000" name="app/gateway/routes" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestCreate01Invalid" time="0.000000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestCreate01MissingPayload" time="0.010000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestCreate02ServerError" time="0.010000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestDelete01Cases" time="0.020000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestDelete03EmptyID" time="0.000000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestGet" time="0.000000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestUpdate01MissingPayload" time="0.040000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestUpdate02ServerError" time="0.010000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes/TestUpdate03EmptyID" time="0.000000"></testcase>
+		<testcase classname="app/gateway/routes" name="TestProposalRoutes" time="0.100000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gql" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="5" failures="0" time="0.020000" name="app/gql/graph" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/gql/graph" name="TestProposalHandler/Test00GetOnlyForUser" time="0.000000"></testcase>
+		<testcase classname="app/gql/graph" name="TestProposalHandler/Test00GetUnauthenticated" time="0.000000"></testcase>
+		<testcase classname="app/gql/graph" name="TestProposalHandler/Test00GetWithFilter" time="0.000000"></testcase>
+		<testcase classname="app/gql/graph" name="TestProposalHandler/Test00GetWithPagination" time="0.000000"></testcase>
+		<testcase classname="app/gql/graph" name="TestProposalHandler" time="0.020000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gql/graph/generated" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/gql/graph/model" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="9" failures="0" time="0.000000" name="app/internal/domain/job" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/internal/domain/job" name="TestNewJob" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/job" name="TestJob_ID" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/job" name="TestURLSpec" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/job" name="TestSourceSpec" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/job" name="TestJob_Description" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/job" name="TestJob_Role" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/job" name="TestJob_CompanyName" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/job" name="TestJob_Source" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/job" name="TestJob_CompanyURL" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/domain/job/mocks" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="11" failures="0" time="0.030000" name="app/internal/domain/proposal" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_SetID" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_SetUserID" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_Company" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_JobSource" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_JobLink" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_JobResume" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_Stage" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_Notes" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_Role" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestProposal_Timestamps" time="0.030000"></testcase>
+		<testcase classname="app/internal/domain/proposal" name="TestBelongsTo" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/domain/proposal/mocks" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/domain/session" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="4" failures="0" time="0.000000" name="app/internal/domain/user" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/internal/domain/user" name="TestUser_Email" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/user" name="TestUser_Name" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/user" name="TestUser_ID" time="0.000000"></testcase>
+		<testcase classname="app/internal/domain/user" name="TestNewUser" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/domain/user/mocks" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/cache" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.000000" name="app/internal/shared/common" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/internal/shared/common" name="TestTryOrError" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/db" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/errors" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/grpc" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/http" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/infrastructure/criteria" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/infrastructure/grpc_job" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/infrastructure/grpc_proposal" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/infrastructure/grpc_user" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/sentry" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/test_data" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/internal/shared/worker" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/jobs/cmd/migration" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/jobs/cmd/server" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.000000" name="app/services/jobs/cmd/server/handlers" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/jobs/cmd/server/handlers" name="TestJobHandler_GetAll" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/jobs/cmd/worker" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="0.270000" name="app/services/jobs/cmd/worker/handlers/remoteok" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/jobs/cmd/worker/handlers/remoteok" name="TestHandler_FetchJob" time="0.020000"></testcase>
+		<testcase classname="app/services/jobs/cmd/worker/handlers/remoteok" name="TestHandler_Fetch" time="0.250000"></testcase>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="0.020000" name="app/services/jobs/cmd/worker/handlers/tia" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/jobs/cmd/worker/handlers/tia" name="TestHandler_FetchFailConnection" time="0.010000"></testcase>
+		<testcase classname="app/services/jobs/cmd/worker/handlers/tia" name="TestHandler_Fetch" time="0.010000"></testcase>
+	</testsuite>
+	<testsuite tests="4" failures="0" time="0.030000" name="app/services/jobs/cmd/worker/handlers/weworkremotely" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/jobs/cmd/worker/handlers/weworkremotely" name="TestHandler_FetchFail" time="0.000000"></testcase>
+		<testcase classname="app/services/jobs/cmd/worker/handlers/weworkremotely" name="TestHandler_FetchJobFail" time="0.000000"></testcase>
+		<testcase classname="app/services/jobs/cmd/worker/handlers/weworkremotely" name="TestHandler_Fetch" time="0.010000"></testcase>
+		<testcase classname="app/services/jobs/cmd/worker/handlers/weworkremotely" name="TestHandler_FetchJob" time="0.020000"></testcase>
+	</testsuite>
+	<testsuite tests="4" failures="0" time="0.040000" name="app/services/jobs/cmd/worker/wrapper" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/jobs/cmd/worker/wrapper" name="TestNewHttpClient" time="0.000000"></testcase>
+		<testcase classname="app/services/jobs/cmd/worker/wrapper" name="TestHttpClient_Do" time="0.000000"></testcase>
+		<testcase classname="app/services/jobs/cmd/worker/wrapper" name="TestWorkerDataJob_Run" time="0.020000"></testcase>
+		<testcase classname="app/services/jobs/cmd/worker/wrapper" name="TestWorkerIndex_Run" time="0.020000"></testcase>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="0.010000" name="app/services/jobs/entity" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/jobs/entity" name="TestJob_TransformFail" time="0.000000"></testcase>
+		<testcase classname="app/services/jobs/entity" name="TestJob_FromDomainOk" time="0.010000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/jobs/repository" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/jobs/repository/cache" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="7" failures="0" time="0.150000" name="app/services/jobs/repository/db" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/jobs/repository/db" name="TestJobDBRepository/Test00Create" time="0.000000"></testcase>
+		<testcase classname="app/services/jobs/repository/db" name="TestJobDBRepository/Test01Delete" time="0.000000"></testcase>
+		<testcase classname="app/services/jobs/repository/db" name="TestJobDBRepository/Test02Update" time="0.000000"></testcase>
+		<testcase classname="app/services/jobs/repository/db" name="TestJobDBRepository/Test04Count" time="0.020000"></testcase>
+		<testcase classname="app/services/jobs/repository/db" name="TestJobDBRepository/Test05GetAll" time="0.020000"></testcase>
+		<testcase classname="app/services/jobs/repository/db" name="TestJobDBRepository/Test06GetAllCount" time="0.020000"></testcase>
+		<testcase classname="app/services/jobs/repository/db" name="TestJobDBRepository" time="0.090000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/proposal" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/proposal/entity" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="18" failures="0" time="0.050000" name="app/services/proposal/handlers" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test01Minimal" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test02FilterID" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test03FilterUserID" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test04FilterRole" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test05FilterCompany" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test05FilterStage" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test06FilterStage" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test07FilterJobSource" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test08FilterJobLink" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test09FilterResume" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria/Test10FilterNotes" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestCriteria" time="0.020000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestProposalHandler/Test01GetAll" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestProposalHandler/Test02Count" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestProposalHandler/Test03GetAndCount" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestProposalHandler/Test04Create" time="0.010000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestProposalHandler/Test05Delete" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/handlers" name="TestProposalHandler" time="0.020000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/proposal/repository/cache" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="7" failures="0" time="0.100000" name="app/services/proposal/repository/db" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+		<testcase classname="app/services/proposal/repository/db" name="TestDBRepository/Test00Create" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/repository/db" name="TestDBRepository/Test01Delete" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/repository/db" name="TestDBRepository/Test02Update" time="0.000000"></testcase>
+		<testcase classname="app/services/proposal/repository/db" name="TestDBRepository/Test04Count" time="0.010000"></testcase>
+		<testcase classname="app/services/proposal/repository/db" name="TestDBRepository/Test05GetAll" time="0.020000"></testcase>
+		<testcase classname="app/services/proposal/repository/db" name="TestDBRepository/Test06GetAllCount" time="0.010000"></testcase>
+		<testcase classname="app/services/proposal/repository/db" name="TestDBRepository" time="0.060000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="app/services/user/handlers" timestamp="2021-08-04T13:54:52+07:00">
+		<properties>
+			<property name="go.version" value="go1.16.6 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+</testsuites>

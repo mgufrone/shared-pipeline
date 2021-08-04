@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="tests/" tests="11" assertions="11" errors="0" failures="11" skipped="0" time="13.058232">
+        <testsuite name="Tests\\BrandBundle\\Controller\\API\\Company\\CampaignControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/CampaignControllerTest.php" tests="2" assertions="2" errors="0" failures="2" skipped="0" time="7.442149">
+            <testcase name="testPublishCampaignCycle" class="Tests\\BrandBundle\\Controller\\API\\Company\\CampaignControllerTest" classname="Tests.BrandBundle.Controller.API.Company.CampaignControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/CampaignControllerTest.php" line="8" assertions="1" time="6.559405">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\CampaignControllerTest::testPublishCampaignCycle
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+            <testcase name="testGetCampaignsAction" class="Tests\\BrandBundle\\Controller\\API\\Company\\CampaignControllerTest" classname="Tests.BrandBundle.Controller.API.Company.CampaignControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/CampaignControllerTest.php" line="29" assertions="1" time="0.882744">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\CampaignControllerTest::testGetCampaignsAction
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+        </testsuite>
+        <testsuite name="Tests\\BrandBundle\\Controller\\API\\Company\\DesignControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/DesignControllerTest.php" tests="2" assertions="2" errors="0" failures="2" skipped="0" time="1.324698">
+            <testcase name="testGetDesignsAction" class="Tests\\BrandBundle\\Controller\\API\\Company\\DesignControllerTest" classname="Tests.BrandBundle.Controller.API.Company.DesignControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/DesignControllerTest.php" line="8" assertions="1" time="0.654524">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\DesignControllerTest::testGetDesignsAction
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+            <testcase name="testGetDesignsFoldersMeAction" class="Tests\\BrandBundle\\Controller\\API\\Company\\DesignControllerTest" classname="Tests.BrandBundle.Controller.API.Company.DesignControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/DesignControllerTest.php" line="18" assertions="1" time="0.670174">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\DesignControllerTest::testGetDesignsFoldersMeAction
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+        </testsuite>
+        <testsuite name="Tests\\BrandBundle\\Controller\\API\\Company\\TemplateControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/Format/TemplateControllerTest.php" tests="3" assertions="3" errors="0" failures="3" skipped="0" time="1.919083">
+            <testcase name="testDraftTemplate" class="Tests\\BrandBundle\\Controller\\API\\Company\\TemplateControllerTest" classname="Tests.BrandBundle.Controller.API.Company.TemplateControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/Format/TemplateControllerTest.php" line="8" assertions="1" time="0.717571">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\TemplateControllerTest::testDraftTemplate
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+            <testcase name="testTemplateTags" class="Tests\\BrandBundle\\Controller\\API\\Company\\TemplateControllerTest" classname="Tests.BrandBundle.Controller.API.Company.TemplateControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/Format/TemplateControllerTest.php" line="26" assertions="1" time="0.674619">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\TemplateControllerTest::testTemplateTags
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+            <testcase name="testGetTemplatesAction" class="Tests\\BrandBundle\\Controller\\API\\Company\\TemplateControllerTest" classname="Tests.BrandBundle.Controller.API.Company.TemplateControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/Format/TemplateControllerTest.php" line="55" assertions="1" time="0.526893">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\TemplateControllerTest::testGetTemplatesAction
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+        </testsuite>
+        <testsuite name="Tests\\BrandBundle\\Controller\\API\\Company\\FormatControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/FormatControllerTest.php" tests="2" assertions="2" errors="0" failures="2" skipped="0" time="1.113824">
+            <testcase name="testDraftTemplates" class="Tests\\BrandBundle\\Controller\\API\\Company\\FormatControllerTest" classname="Tests.BrandBundle.Controller.API.Company.FormatControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/FormatControllerTest.php" line="8" assertions="1" time="0.549086">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\FormatControllerTest::testDraftTemplates
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+            <testcase name="testGetFormatsAction" class="Tests\\BrandBundle\\Controller\\API\\Company\\FormatControllerTest" classname="Tests.BrandBundle.Controller.API.Company.FormatControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/FormatControllerTest.php" line="39" assertions="1" time="0.564738">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\FormatControllerTest::testGetFormatsAction
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+        </testsuite>
+        <testsuite name="Tests\\BrandBundle\\Controller\\API\\Company\\Library\\ContentControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/Library/ContentControllerTest.php" tests="1" assertions="1" errors="0" failures="1" skipped="0" time="0.664726">
+            <testcase name="testGetContentsAction" class="Tests\\BrandBundle\\Controller\\API\\Company\\Library\\ContentControllerTest" classname="Tests.BrandBundle.Controller.API.Company.Library.ContentControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/BrandBundle/Controller/API/Company/Library/ContentControllerTest.php" line="8" assertions="1" time="0.664726">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\BrandBundle\\Controller\\API\\Company\\Library\\ContentControllerTest::testGetContentsAction
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+        </testsuite>
+        <testsuite name="Tests\\EnterpriseBundle\\Controller\\ServerControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/EnterpriseBundle/Controller/ServerControllerTest.php" tests="1" assertions="1" errors="0" failures="1" skipped="0" time="0.593752">
+            <testcase name="testEnterpriseUpdateAction" class="Tests\\EnterpriseBundle\\Controller\\ServerControllerTest" classname="Tests.EnterpriseBundle.Controller.ServerControllerTest" file="/home/jenkins/workspace/gufy-unit-testing/tests/EnterpriseBundle/Controller/ServerControllerTest.php" line="8" assertions="1" time="0.593752">
+                <failure type="PHPUnit\\Framework\\ExpectationFailedException">Tests\\EnterpriseBundle\\Controller\\ServerControllerTest::testEnterpriseUpdateAction
+                    Failed asserting that 404 is identical to 200.
+
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:138
+                    /home/jenkins/workspace/gufy-unit-testing/tests/Model/RestApiTestCase.php:18
+                </failure>
+            </testcase>
+        </testsuite>
+    </testsuite>
+</testsuites>
