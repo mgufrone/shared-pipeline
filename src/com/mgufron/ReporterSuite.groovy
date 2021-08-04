@@ -1,5 +1,5 @@
 package com.mgufron
-
+import groovy.util.XmlSlurper
 class ReporterSuite {
   final String reportPath
   int totalTests = 0

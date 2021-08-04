@@ -1,4 +1,4 @@
-import com.mgufron.TestReporter
+import com.mgufron.ReporterProcessor
 import com.mgufron.BuildChangeSet
 import groovy.transform.SourceURI
 import java.nio.file.Path
@@ -9,7 +9,7 @@ URI sourceUri
 
 Path scriptLocation = Paths.get(sourceUri)
 
-def reporter = new TestReporter(["${scriptLocation.getParent().getFileName()}/report2.xml"])
+def reporter = new ReporterProcessor(["${scriptLocation.getParent().getFileName()}/report2.xml"])
 println "tests: ${reporter.getTotalTests()}"
 println "failures: ${reporter.getFailures()}"
 println "success: ${reporter.getSuccessful()}"

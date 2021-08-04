@@ -14,27 +14,27 @@ class ReporterProcessor {
     }
   }
   int getTotalTests() {
-    return sum { TestProcessor it ->
+    return sum { ReporterSuite it ->
       return it.totalTests
     }
   }
   int getFailures() {
-    return sum { TestProcessor it ->
+    return sum { ReporterSuite it ->
       return it.failures
     }
   }
   int getSkipped() {
-    return sum { TestProcessor suite ->
+    return sum { ReporterSuite suite ->
       return suite.skipped
     }
   }
   int getSuccessful() {
-    return sum { TestProcessor suite ->
+    return sum { ReporterSuite suite ->
       return suite.success
     }
   }
   private int sum(Closure closure) {
-    return testCollections.inject(0) { int total, TestProcessor proc ->
+    return testCollections.inject(0) { int total, ReporterSuite proc ->
       return total + closure(proc)
     }
   }
