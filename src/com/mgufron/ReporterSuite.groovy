@@ -8,9 +8,9 @@ class ReporterSuite {
   int skipped = 0
   ReporterSuite(String reportPath) {
     this.reportPath = reportPath
-    process()
+    generateReportSuite()
   }
-  private void process() {
+  private void generateReportSuite() {
     println "processing ${reportPath}"
     try {
       def slurper = new XmlSlurper().parse(reportPath)
