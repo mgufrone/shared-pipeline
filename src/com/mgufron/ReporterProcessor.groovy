@@ -7,6 +7,7 @@ class ReporterProcessor {
   private List<ReporterSuite> testCollections = []
   ReporterProcessor(List<String> reportPath) {
     this.reportPath = reportPath
+    process()
   }
   void process() {
     reportPath.each { String path ->

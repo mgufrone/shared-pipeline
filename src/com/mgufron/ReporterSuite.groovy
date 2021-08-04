@@ -11,15 +11,20 @@ class ReporterSuite {
     process()
   }
   private void process() {
-    def slurper = new XmlSlurper().parse(reportPath)
-    def suites = slurper.testsuite
-    if (suites instanceof Iterable) {
-      suites.each { suite ->
-        processSuite(suite)
+    println "processing ${reportPath}"
+    try {
+      def slurper = new XmlSlurper().parse(reportPath)
+      def suites = slurper.testsuite
+      if (suites instanceof Iterable) {
+        suites.each { suite ->
+          processSuite(suite)
+        }
+        return
       }
-      return
+      processSuite(suites)
+    } catch (e) {
+      println "error: ${e.getMessage()}"
     }
-    processSuite(suites)
   }
   private void processSuite(testsuite) {
     def totalTests = testsuite.@tests.toInteger()
