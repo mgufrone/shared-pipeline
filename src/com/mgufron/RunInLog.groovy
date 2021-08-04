@@ -43,7 +43,7 @@ class RunInLog {
       }
       send(msg["id"], ":gh-loading: ${msg["message"]}")
       body.call()
-      if (!msg["sendSuccess"] || msg["sendSuccess"] == true) {
+      if (!msg.containsKey("sendSuccess") || msg["sendSuccess"]) {
         send(msg["id"], ":white_check_mark: ${msg["message"]} ${runDuration(start)}")
       }
     } catch(e) {
