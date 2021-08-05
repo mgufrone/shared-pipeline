@@ -47,7 +47,9 @@ class RunInLog {
         send(msg["id"], ":white_check_mark: ${msg["message"]} ${runDuration(start)}")
       }
     } catch(e) {
-      send(msg["id"], ":no_entry: ${msg["message"]} ${runDuration(start)}", msg["failBtn"])
+      if (!msg.containsKey("sendSuccess") || msg["sendSuccess"]) {
+        send(msg["id"], ":no_entry: ${msg["message"]} ${runDuration(start)}", msg["failBtn"])
+      }
       throw e
     }
   }
