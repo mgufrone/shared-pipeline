@@ -38,7 +38,7 @@ class ReporterSuite {
     def totalTests = testsuite.@tests.toInteger()
     def failures = testsuite.@failures.toInteger()
     def success = totalTests - failures
-    if (testsuite.@skipped) {
+    if (testsuite.@skipped && testsuite.@skipped != "") {
       def skipped = testsuite.@skipped.toInteger()
       if (skipped > 0) {
         this.skipped += skipped
