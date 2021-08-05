@@ -35,15 +35,14 @@ class ReporterSuite {
     return this
   }
   private void processSuite(testsuite) {
-    println "tests: ${testsuite.@tests}"
-    println "failures: ${testsuite.@failures}"
-    println "skipped: ${testsuite.@skipped}"
     def totalTests = testsuite.@tests.toInteger()
     def failures = testsuite.@failures.toInteger()
     def success = totalTests - failures
-    def skipped = testsuite.@skipped.toInteger()
-    if (skipped > 0) {
-      this.skipped += skipped
+    if (testsuite.@skipped) {
+      def skipped = testsuite.@skipped.toInteger()
+      if (skipped > 0) {
+        this.skipped += skipped
+      }
     }
     this.totalTests += totalTests
     this.success += success
