@@ -12,8 +12,8 @@ class ReporterSuite {
   void withFile(File file) {
     reportSuite(file)
   }
-  void withText(String text) {
-    createReport(text)
+  ReporterSuite withText(String text) {
+    return createReport(text)
   }
   void generateReportSuite() {
     File file = new File(reportPath)
@@ -22,16 +22,17 @@ class ReporterSuite {
   void reportSuite(File file) {
     createReport(file.getText())
   }
-  void createReport(String text) {
+  ReporterSuite createReport(String text) {
     def slurper = new XmlSlurper().parseText(text)
     def suites = slurper.testsuite
     if (suites instanceof Iterable || suites instanceof List) {
       suites.each { suite ->
         processSuite(suite)
       }
-      return
+      return this
     }
     processSuite(suites)
+    return this
   }
   private void processSuite(testsuite) {
     def totalTests = testsuite.@tests.toInteger()

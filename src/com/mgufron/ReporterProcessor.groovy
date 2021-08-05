@@ -9,10 +9,9 @@ class ReporterProcessor {
     this.reportPath = reportPath
   }
   void withTexts(List<String> files) {
-    files.each {
-      def rp = new ReporterSuite()
-      rp.withText(it)
-      testCollections.push(rp)
+    testCollections = files.inject([]) { arr, it ->
+      arr.push(new ReporterSuite().withText(it))
+      return arr
     }
   }
   void generateReportSuite() {

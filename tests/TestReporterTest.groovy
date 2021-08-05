@@ -10,7 +10,7 @@ URI sourceUri
 Path scriptLocation = Paths.get(sourceUri)
 
 def reporter = new ReporterProcessor()
-reporter.withFiles([new File("${scriptLocation.getParent().getFileName()}/report.xml")])
+reporter.withTexts([new File("${scriptLocation.getParent().getFileName()}/report.xml").getText()])
 println "tests: ${reporter.getTotalTests()}"
 println "failures: ${reporter.getFailures()}"
 println "success: ${reporter.getSuccessful()}"
