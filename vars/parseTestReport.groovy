@@ -5,6 +5,6 @@ ReporterProcessor call(List<String> reportPaths) {
   def files = reportPaths.each {
     new File(it)
   }
-  rp.generateReportSuite(files)
+  rp.withFiles(files)
   return rp
 }
