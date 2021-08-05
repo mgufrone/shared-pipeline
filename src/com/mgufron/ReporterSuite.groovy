@@ -10,20 +10,15 @@ class ReporterSuite {
     this.reportPath = reportPath
   }
   private void generateReportSuite() {
-    println "processing ${reportPath}"
-    try {
-      def slurper = new XmlSlurper().parse(reportPath)
-      def suites = slurper.testsuite
-      if (suites instanceof Iterable) {
-        suites.each { suite ->
-          processSuite(suite)
-        }
-        return
+    def slurper = new XmlSlurper().parse(reportPath)
+    def suites = slurper.testsuite
+    if (suites instanceof Iterable || suites instanceof List) {
+      suites.each { suite ->
+        processSuite(suite)
       }
-      processSuite(suites)
-    } catch (e) {
-      println "error: ${e.getMessage()}"
+      return
     }
+    processSuite(suites)
   }
   private void processSuite(testsuite) {
     def totalTests = testsuite.@tests.toInteger()
