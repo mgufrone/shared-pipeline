@@ -35,6 +35,9 @@ class ReporterSuite {
     return this
   }
   private void processSuite(testsuite) {
+    println "tests: ${testsuite.@tests}"
+    println "failures: ${testsuite.@failures}"
+    println "skipped: ${testsuite.@skipped}"
     def totalTests = testsuite.@tests.toInteger()
     def failures = testsuite.@failures.toInteger()
     def success = totalTests - failures
