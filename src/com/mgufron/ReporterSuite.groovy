@@ -10,13 +10,13 @@ class ReporterSuite {
     this.reportPath = reportPath
   }
   void withFile(File file) {
-    generateReportSuite(file)
+    reportSuite(file)
   }
   void generateReportSuite() {
     File file = new File(reportPath)
-    generateReportSuite(file)
+    reportSuite(file)
   }
-  void generateReportSuite(File file) {
+  void reportSuite(File file) {
     def slurper = new XmlSlurper().parseText(file.getText())
     def suites = slurper.testsuite
     if (suites instanceof Iterable || suites instanceof List) {
