@@ -9,11 +9,15 @@ class ReporterSuite {
   ReporterSuite(String reportPath) {
     this.reportPath = reportPath
   }
-  private void generateReportSuite() {
-    println "parsing ${reportPath}"
+  void withFile(File file) {
+    generateReportSuite(file)
+  }
+  void generateReportSuite() {
     File file = new File(reportPath)
+    generateReportSuite(file)
+  }
+  void generateReportSuite(File file) {
     def slurper = new XmlSlurper().parseText(file.getText())
-    println "extracing ${file.getText()}"
     def suites = slurper.testsuite
     if (suites instanceof Iterable || suites instanceof List) {
       suites.each { suite ->

@@ -2,6 +2,9 @@ import com.mgufron.ReporterProcessor
 
 ReporterProcessor call(List<String> reportPaths) {
   def rp = new ReporterProcessor(reportPaths)
-  rp.generateReportSuite()
+  def files = reportPaths.each {
+    new File(it)
+  }
+  rp.generateReportSuite(files)
   return rp
 }

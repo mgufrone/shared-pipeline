@@ -8,6 +8,13 @@ class ReporterProcessor {
   ReporterProcessor(List<String> reportPath) {
     this.reportPath = reportPath
   }
+  void withFiles(List<File> files) {
+    files.each {
+      def rp = new ReporterSuite()
+      rp.withFile(it)
+      testCollections.push(rp)
+    }
+  }
   void generateReportSuite() {
     reportPath.each { String path ->
       def rp = new ReporterSuite(path)
