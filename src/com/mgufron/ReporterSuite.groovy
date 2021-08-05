@@ -12,12 +12,18 @@ class ReporterSuite {
   void withFile(File file) {
     reportSuite(file)
   }
+  void withText(String text) {
+    createReport(text)
+  }
   void generateReportSuite() {
     File file = new File(reportPath)
     reportSuite(file)
   }
   void reportSuite(File file) {
-    def slurper = new XmlSlurper().parseText(file.getText())
+    createReport(file.getText())
+  }
+  void createReport(String text) {
+    def slurper = new XmlSlurper().parseText(text)
     def suites = slurper.testsuite
     if (suites instanceof Iterable || suites instanceof List) {
       suites.each { suite ->
