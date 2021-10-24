@@ -11,14 +11,14 @@ class Cache {
   public Cache(String repoName, String branch, String fallbackBranch, Closure archiver, Closure restorer) {
     MessageDigest sha1 = MessageDigest.getInstance("SHA1")
     byte[] digest  = sha1.digest("${repoName}-${branch}".getBytes())
-    String finalSum = BigInteger(1, digest).toString(16)
+    String finalSum = new BigInteger(1, digest).toString(16)
     this.archiver = archiver
     this.restorer = restorer
     this.setMainChecksum(finalSum)
     this.setFallbackChecksum(finalSum)
     if (branch != fallbackBranch) {
       byte[] fallback = sha1.digest("${repoName}-${fallbackBranch}")
-      String fallbackSum = BigInteger(1, fallback).toString(16)
+      String fallbackSum = new BigInteger(1, fallback).toString(16)
       this.setFallbackChecksum(fallbackSum)
     }
   }
