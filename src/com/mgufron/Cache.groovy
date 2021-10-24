@@ -8,13 +8,17 @@ class Cache {
   Closure archiver
   Closure restorer
   public Cache(String repoName, String branch, String fallbackBranch, Closure archiver, Closure restorer) {
-    String finalSum = "${repoName}-${branch}".digest('SHA-1')
+    MessageDigest sha1 = MessageDigest.getInstance("SHA1")
+    byte[] digest  = sha1.digest("${repoName}-${branch}".getBytes())
+    String finalSum = BigInteger(1, digest).toString(16)
     this.archiver = archiver
     this.restorer = restorer
     this.setMainChecksum(finalSum)
     this.setFallbackChecksum(finalSum)
     if (branch != fallbackBranch) {
-      this.setFallbackChecksum("${repoName}-${fallbackBranch}".digest('SHA-1'))
+      byte[] fallback = sha1.digest("${repoName}-${fallbackBranch}")
+      String fallbackSum = BigInteger(1, fallback).toString(16)
+      this.setFallbackChecksum(fallbackSum)
     }
   }
   public void restore() {
