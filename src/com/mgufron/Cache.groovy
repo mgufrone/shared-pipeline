@@ -8,6 +8,7 @@ class Cache {
   String fallbackChecksum
   Closure archiver
   Closure restorer
+  String repoName
   public Cache(String repoName, String branch, String fallbackBranch, Closure archiver, Closure restorer) {
     MessageDigest sha1 = MessageDigest.getInstance("SHA1")
     String password = "$repoName-$branch".toString()
@@ -15,6 +16,7 @@ class Cache {
     String finalSum = new BigInteger(1, digest).toString(16)
     this.archiver = archiver
     this.restorer = restorer
+    this.setRepoName(repoName)
     this.setMainChecksum(finalSum)
     this.setFallbackChecksum(finalSum)
     if (branch != fallbackBranch) {
@@ -23,6 +25,9 @@ class Cache {
       String fallbackSum = new BigInteger(1, fallback).toString(16)
       this.setFallbackChecksum(fallbackSum)
     }
+  }
+  public GString getChecksum() {
+    return "${this.getRepoName()}-${this.getMainChecksum().substring(0, 8)}"
   }
   public void restore() {
     try {
